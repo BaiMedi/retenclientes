@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Checklist para Aumentar la Retención de Clientes</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            margin: 20px;
+            background-color: #f9f9f9;
+        }
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: #ffffff;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+        }
+        h1, h2 {
+            color: #00344B;
+        }
+        textarea, button {
+            width: 100%;
+            padding: 10px;
+            margin: 10px 0;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            font-size: 16px;
+        }
+        .result {
+            margin-top: 20px;
+            padding: 20px;
+            background-color: #ffe0b2;
+            border: 1px solid #ffcc80;
+            border-radius: 5px;
+            color: #e65100;
+            font-weight: bold;
+        }
+        .cta-container {
+            text-align: center;
+            margin-top: 30px;
+        }
+        .cta-container p {
+            color: #00344B;
+            font-size: 18px;
+            font-weight: bold;
+        }
+        .cta-container a {
+            display: inline-block;
+            background-color: #00DC42;
+            color: #ffffff;
+            text-decoration: none;
+            padding: 15px 25px;
+            border-radius: 5px;
+            font-size: 18px;
+            font-weight: bold;
+        }
+        .cta-container a:hover {
+            background-color: #00c03a;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Checklist para Aumentar la Retención de Clientes</h1>
+        <p>Evalúa y mejora tu estrategia de fidelización con esta checklist interactiva.</p>
+
+        <form id="retention-checklist-form">
+            <label for="client-issues">¿Cuáles son las principales quejas o problemas que tienen tus clientes?</label>
+            <textarea id="client-issues" placeholder="Ejemplo: Tiempo de respuesta lento, falta de opciones de pago"></textarea>
+
+            <label for="loyalty-strategies">¿Qué estrategias de fidelización estás aplicando actualmente?</label>
+            <textarea id="loyalty-strategies" placeholder="Ejemplo: Programas de puntos, descuentos para clientes frecuentes"></textarea>
+
+            <button type="button" onclick="generateRetentionPlan()">Generar Plan de Retención</button>
+        </form>
+
+        <div id="result" class="result" style="display: none;"></div>
+
+        <div class="cta-container">
+            <p>REVOLUCIONA TU NEGOCIO CON EL PODER DEL CHAT INTELIGENTE</p>
+            <a href="https://klicana.work/tdivKK" target="_blank">SÍ, QUIERO INSCRIBIRME AHORA EN LUCRACHAT IA</a>
+        </div>
+    </div>
+
+    <script>
+        function generateRetentionPlan() {
+            const issues = document.getElementById("client-issues").value.trim();
+            const strategies = document.getElementById("loyalty-strategies").value.trim();
+
+            if (!issues || !strategies) {
+                document.getElementById("result").style.display = "block";
+                document.getElementById("result").textContent = "Por favor, completa todos los campos para generar tu plan de retención.";
+                return;
+            }
+
+            const plan = `
+                <strong>Plan de Retención:</strong><br>
+                - Resolver problemas clave: "${issues}".<br>
+                - Mejorar estrategias existentes: "${strategies}".<br>
+                <strong>Recomendación:</strong> Implementa encuestas de satisfacción y personaliza las recompensas para tus clientes más leales.
+            `;
+
+            document.getElementById("result").style.display = "block";
+            document.getElementById("result").innerHTML = plan;
+        }
+    </script>
+</body>
+</html>
